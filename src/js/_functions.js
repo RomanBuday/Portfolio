@@ -5,6 +5,25 @@
 import { mobileCheck } from "./functions/mobile-check";
 console.log(mobileCheck())
 
+const hamburger = document.querySelector('.hamburger'),
+      menu      = document.querySelector('.menu'),
+      closeElem     = document.querySelector('.menu__close');
+
+hamburger.addEventListener('click', () =>{
+  menu.classList.add('active');
+});
+
+closeElem.addEventListener('click', () =>{
+  menu.classList.remove('active');
+});
+
+const percents = document.querySelectorAll('.skills__bottom-percent'),
+      lines    = document.querySelectorAll('.skills__panel-colored');
+
+percents.forEach( (item, i) => {
+  lines[i].style.width = item.innerHTML;
+});
+
 // Определение ширины экрана
 // import { isMobile, isTablet, isDesktop } from './functions/check-viewport';
 // if (isDesktop()) {
