@@ -42,6 +42,28 @@
       }
     }
   }
+  .work {
+    &__wrapper {
+      grid-template-columns: repeat(auto-fit, 280px);
+      grid-auto-rows: 280px;
+      justify-content: space-around;
+      row-gap: 35px;
+      .horizontal, .vertical {
+        grid-row: unset;
+        grid-column: unset;
+      }
+    }
+  }
+  .contacts {
+    &__wrapper {
+      padding: 0;
+      grid-template-columns: 400px 520px;
+      column-gap: 20px;
+    }
+    &__form {
+      grid-template: 45px 190px 45px / repeat(2, 250px);
+    }
+}
 }
 @media (max-width: 992px) {
   .container {
@@ -86,6 +108,25 @@
             width: 100%;
         }
       }
+    }
+  }
+  .price {
+    &__wrapper {
+      grid-template-columns: repeat(auto-fit, 340px);
+      margin: 0;
+      margin-top: 40px;
+    }
+  }
+  .contacts {
+    &__wrapper {
+      grid-template-columns: 300px 400px;
+    }
+    &__form {
+      grid-template: 45px 190px 45px / repeat(2, 195px);
+    }
+    &__btn {
+      padding: 8px 25px;
+      line-height: 16px;
     }
   }
 }
@@ -155,6 +196,28 @@
       }
     }
   }
+  .work {
+    padding-top: 40px;
+  }
+  .price {
+    padding-top: 40px;
+    &__wrapper {
+      justify-content: center;
+      margin-top: 20px;
+    }
+  }
+  .contacts {
+    padding-top: 40px;
+    &__photo {
+      display: none;
+    }
+    &__wrapper {
+      grid-template-columns: 1fr;
+    }
+    &__form {
+      grid-template: 45px 190px 45px / repeat(2, 250px);
+    }
+  }
 }
 @media (max-width: 576px) {
   .container {
@@ -207,6 +270,37 @@
     }
     &__panel {
       height: 12px;
+    }
+  }
+  .price {
+    &__wrapper {
+      grid-template-columns: repeat(auto-fit, 295px);
+    }
+  }
+  .contacts {
+    padding-bottom: 50px;
+    &__form {
+      grid-template: 45px 45px 190px minmax(45px, auto) / 1fr;
+    }
+    &__textarea {
+      grid-column: unset;
+      width: 100%;
+    }
+    &__triggers {
+      grid-column: unset;
+      grid-template-columns: 1fr;
+      column-gap: unset;
+      row-gap: 20px;
+    }
+    &__btn {
+      order: 2;
+      max-width: 220px;
+      margin: 0 auto;
+    }
+    &__policy {
+      width: 180px;
+      margin: 0 auto;
+      line-height: 18px;
     }
   }
 }
